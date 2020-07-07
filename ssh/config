@@ -1,0 +1,9 @@
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+
+Host https://git.applifting.cz
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/git_applifting
