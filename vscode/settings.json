@@ -1,54 +1,93 @@
 {
-    // workbench settings
-    "workbench.colorTheme": "Atom One Dark",
-    "workbench.iconTheme": "material-icon-theme",
-    // editor settings
-    "editor.fontFamily": "FiraCode-Retina",
-    "editor.fontLigatures": true,
-    "editor.scrollBeyondLastLine": false,
-    "editor.bracketPairColorization.enabled": true,
-    "editor.formatOnSave": true,
-    // language settings
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.tabSize": 2
+  // workbench settings
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  // security
+  "security.workspace.trust.untrustedFiles": "open",
+  // editor settings
+  "editor.fontFamily": "FiraCode-Retina",
+  "editor.fontLigatures": true,
+  "editor.scrollBeyondLastLine": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.formatOnSave": true,
+  // language settings
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[solidity]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "matklad.rust-analyzer",
+    "editor.tabSize": 4
+  },
+  "[python]": {
+    "editor.tabSize": 4
+  },
+  // plugins settings
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 140,
+  "rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.rustfmt.enableRangeFormatting": true,
+  "material-icon-theme.activeIconPack": "nest",
+  "material-icon-theme.hidesExplorerArrows": true,
+  // vscode vim settings
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["J"],
+      "after": ["5", "j"]
     },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.tabSize": 2
+    {
+      "before": ["K"],
+      "after": ["5", "k"]
     },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.tabSize": 2
+    {
+      "before": ["<C-h>"],
+      "after": ["<C-w>", "h"]
     },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.tabSize": 2
+    {
+      "before": ["<C-j>"],
+      "after": ["<C-w>", "j"]
     },
-    "[solidity]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.tabSize": 2
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "k"]
     },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.tabSize": 2
-    },
-    "[rust]": {
-        "editor.defaultFormatter": "matklad.rust-analyzer",
-        "editor.tabSize": 4
-    },
-    "[python]": {
-        "editor.tabSize": 4
-    },
-    // plugins settings
-    "prettier.singleQuote": true,
-    "prettier.printWidth": 140,
-    "rust-analyzer.procMacro.enable": true,
-    "rust-analyzer.rustfmt.enableRangeFormatting": true,
-    "material-icon-theme.activeIconPack": "nest",
-    "material-icon-theme.hidesExplorerArrows": true,
-    // misc settings
-    "telemetry.telemetryLevel": "off",
-    "html.hover.references": false,
-    "workbench.startupEditor": "none",
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<ESC>"]
+    }
+  ],
+  "vim.handleKeys": {
+    "<D-c>": false
+  },
+  // misc settings
+  "telemetry.telemetryLevel": "off",
+  "html.hover.references": false,
+  "workbench.startupEditor": "none"
 }
