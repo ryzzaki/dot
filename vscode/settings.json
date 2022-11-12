@@ -1,16 +1,24 @@
 {
   // workbench settings
-  "workbench.colorTheme": "Atom One Dark",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Material Theme Ocean High Contrast",
+  "workbench.iconTheme": "eq-material-theme-icons-ocean",
   // security
   "security.workspace.trust.untrustedFiles": "open",
   // editor settings
   "editor.fontFamily": "FiraCode-Retina",
   "editor.fontLigatures": true,
   "editor.scrollBeyondLastLine": false,
-  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.enabled": false,
   "editor.formatOnSave": true,
+  // editor ui settings
+  "editor.minimap.enabled": false,
+  "editor.cursorSmoothCaretAnimation": true,
+  "workbench.editor.tabCloseButton": "off",
+  "explorer.openEditors.visible": 0,
+  "breadcrumbs.enabled": false,
   // language settings
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifier": "relative",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
@@ -36,20 +44,24 @@
     "editor.tabSize": 2
   },
   "[rust]": {
-    "editor.defaultFormatter": "matklad.rust-analyzer",
-    "editor.tabSize": 4
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.tabSize": 4,
+    "editor.inlayHints.enabled": "offUnlessPressed"
   },
   "[python]": {
     "editor.tabSize": 4
   },
+  "[terraform]": {
+    "editor.tabSize": 2
+  },
   // plugins settings
   "prettier.singleQuote": true,
-  "prettier.printWidth": 140,
+  "prettier.printWidth": 120,
   "rust-analyzer.procMacro.enable": true,
-  "rust-analyzer.rustfmt.enableRangeFormatting": true,
   "material-icon-theme.activeIconPack": "nest",
   "material-icon-theme.hidesExplorerArrows": true,
   // vscode vim settings
+  "vim.useSystemClipboard": true,
   "vim.cursorStylePerMode.insert": "line",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -75,11 +87,28 @@
     {
       "before": ["<C-l>"],
       "after": ["<C-w>", "l"]
+    },
+    // for deleting without copying to the clipboard
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["D"],
+      "after": ["\"", "_", "D"]
+    },
+    {
+      "before": ["d", "d"],
+      "after": ["\"", "_", "d", "d"]
     }
   ],
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
+      "after": ["<ESC>"]
+    },
+    {
+      "before": ["J", "K"],
       "after": ["<ESC>"]
     }
   ],
@@ -89,5 +118,12 @@
   // misc settings
   "telemetry.telemetryLevel": "off",
   "html.hover.references": false,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  // misc language settings
+  "solidity.defaultCompiler": "localNodeModule",
+  "python.formatting.provider": "black",
+  "json.format.enable": false,
+  "rust-analyzer.rustfmt.rangeFormatting.enable": true,
+  "dart.debugExternalPackageLibraries": false,
+  "dart.debugSdkLibraries": false
 }
