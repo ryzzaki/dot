@@ -102,6 +102,12 @@
       "after": ["\"", "_", "d", "d"]
     }
   ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
+    }
+  ],
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
