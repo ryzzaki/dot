@@ -14,11 +14,10 @@
   "editor.minimap.enabled": false,
   "editor.cursorSmoothCaretAnimation": true,
   "workbench.editor.tabCloseButton": "off",
+  "workbench.layoutControl.enabled": false,
   "explorer.openEditors.visible": 0,
   "breadcrumbs.enabled": false,
   // language settings
-  "typescript.preferences.importModuleSpecifier": "relative",
-  "javascript.preferences.importModuleSpecifier": "relative",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
@@ -125,7 +124,10 @@
   "telemetry.telemetryLevel": "off",
   "html.hover.references": false,
   "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
   // misc language settings
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifier": "relative",
   "solidity.defaultCompiler": "localNodeModule",
   "python.formatting.provider": "black",
   "json.format.enable": false,
