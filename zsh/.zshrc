@@ -80,6 +80,15 @@ fpath+=$HOME/.zsh/pure
 autoload -U promptinit; promptinit
 prompt pure
 
+# Set the tab title to current directory
+
+DISABLE_AUTO_TITLE="true"
+shorten_tab_title() {
+  # sets the tab title to current dir
+  echo -ne "\e]1;${PWD##*/}\a"
+}
+add-zsh-hook precmd shorten_tab_title
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -104,12 +113,13 @@ prompt pure
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias la="ls -a"
+alias tf="terraform"
 alias kick="nvm current"
 alias edit-cmd="nano ~/.zsh_history"
 alias wipe-cmd="echo '' > ~/.zsh_history & exec $SHELL -l"
 alias nano="/opt/homebrew/bin/nano"
 alias peek="sudo lsof -i"
+alias renovate="npm install -g yarn @nestjs/cli"
 
 # nvm functions
 
@@ -138,3 +148,5 @@ npm() {
 # exported paths
 
 export PATH=/opt/homebrew/bin:$PATH
+export PATH=/usr/local/opt/python/libexec/bin:$PATH
+export PATH=$PATH:/Users/vcn/.flutter/bin

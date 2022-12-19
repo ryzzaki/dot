@@ -3,7 +3,8 @@ Host *
   UseKeychain yes
   IdentityFile ~/.ssh/id_rsa
 
-Host https://git.applifting.cz
+Host https://remote.vcn.sh
   AddKeysToAgent yes
   UseKeychain yes
-  IdentityFile ~/.ssh/git_applifting
+  IdentityFile ~/.ssh/private_key
+  
