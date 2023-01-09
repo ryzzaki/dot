@@ -1,0 +1,47 @@
+{
+  "TypeScript Functional Component": {
+    "prefix": "tsxfc",
+    "scope": "typescriptreact",
+    "body": [
+      "import React from 'react';",
+      "\ntype ${name}Props = {};",
+      "\nconst ${name}: React.FC<${name}Props> = () => <></>;",
+      "\nexport default ${name};"
+    ],
+    "description": "Bootstrap a basic React Functional Component in TypeScript"
+  },
+  "Flutter Stateful Widget": {
+    "prefix": "dartsw",
+    "scope": "dart",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "\nclass ${name} extends StatefulWidget {",
+      "\tconst ${name}({super.key});",
+      "\n\t@override",
+      "\tState<${name}> createState() => _${name}State();",
+      "}",
+      "\nclass _${name}State extends State<${name}> {",
+      "\t@override",
+      "\tWidget build(BuildContext context) {",
+      "\t\treturn Container();",
+      "\t}",
+      "}"
+    ],
+    "description": "Bootstrap a basic Flutter Stateful Widget in Dart"
+  },
+  "Flutter Stateless Widget": {
+    "prefix": "dartw",
+    "scope": "dart",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "\nclass ${name} extends StatelessWidget {",
+      "\tconst ${name}({super.key});",
+      "\n\t@override",
+      "\tWidget build(BuildContext context) {",
+      "\t\treturn Container();",
+      "\t}",
+      "}"
+    ],
+    "description": "Bootstrap a basic Flutter Stateless Widget in Dart"
+  }
+}
