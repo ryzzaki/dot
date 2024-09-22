@@ -1,9 +1,10 @@
 {
   // workbench settings
-  "workbench.colorTheme": "Aura Soft Dark",
+  "workbench.colorTheme": "Ayu Dark Bordered",
   "workbench.iconTheme": "moxer-icons",
   "workbench.layoutControl.enabled": false,
   "workbench.editor.tabActionCloseVisibility": false,
+  "workbench.activityBar.orientation": "vertical", // modification for cursor only
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
   // security
@@ -19,6 +20,8 @@
   "editor.minimap.enabled": false,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "phase",
+  // misc ui settings
   "window.commandCenter": false,
   "explorer.openEditors.visible": 1,
   "breadcrumbs.enabled": false,
@@ -137,6 +140,13 @@
       "after": ["\"", "_", "d"]
     }
   ],
+  // allows pasting in visual mode without overwriting the register
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["p"],
+      "after": ["P"]
+    }
+  ],
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
@@ -160,5 +170,6 @@
   "json.format.enable": false,
   "rust-analyzer.rustfmt.rangeFormatting.enable": true,
   "dart.debugExternalPackageLibraries": false,
-  "dart.debugSdkLibraries": false
+  "dart.debugSdkLibraries": false,
+  "git.autofetch": true
 }
