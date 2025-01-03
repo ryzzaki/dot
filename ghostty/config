@@ -1,5 +1,32 @@
+# visuals
 theme = rose-pine
-cursor-style = bar
+# theme = catppuccin-macchiato
+cursor-style = block
 selection-invert-fg-bg = true
+
+font-feature = true
+font-family = Liga SFMono Nerd Font
+font-size = 13
+
+background-opacity = 0.90
+background-blur-radius = 10
+
+adjust-cell-height = 35%
+adjust-underline-position = 5
+
+# window & tabs related settings
+window-padding-balance = true
 window-padding-x = 7,12
 window-padding-y = 7,12
+window-height = 28
+window-width = 130
+# this won't be needed when window position is supported
+window-save-state = always
+window-colorspace = "display-p3"
+window-inherit-working-directory = false
+
+# misc settings
+mouse-scroll-multiplier = 2
+mouse-hide-while-typing = true
+shell-integration-features = no-cursor,sudo,no-title
+macos-titlebar-style= transparent

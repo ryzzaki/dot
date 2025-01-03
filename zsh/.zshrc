@@ -75,10 +75,10 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-fpath+=$HOME/.zsh/pure
-autoload -U promptinit; promptinit
-prompt pure
+# old pure prompt - currently replaced by starship
+# fpath+=$HOME/.zsh/pure
+# autoload -U promptinit; promptinit
+# prompt pure
 
 # Set the tab title to current directory
 
@@ -113,6 +113,7 @@ add-zsh-hook precmd shorten_tab_title
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias ls="eza --color=auto --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias tf="terraform"
 alias kick="nvm current"
 alias edit-cmd="nano ~/.zsh_history"
@@ -120,6 +121,7 @@ alias wipe-cmd="echo '' > ~/.zsh_history & exec $SHELL -l"
 alias nano="/opt/homebrew/bin/nano"
 alias peek="sudo lsof -i"
 alias renovate="npm install -g yarn @nestjs/cli"
+alias crsr="cursor"
 
 # nvm functions
 
@@ -150,3 +152,10 @@ npm() {
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
 export PATH=$PATH:/Users/vcn/.flutter/bin
+export PATH=$PATH:/Users/vcn/.avm/bin
+
+export LANG=en_US.UTF-8
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+
+# inits the starship prompt
+eval "$(starship init zsh)"
