@@ -1,11 +1,12 @@
 {
   // workbench settings
   "workbench.colorTheme": "Ayu Dark Bordered",
-  "workbench.iconTheme": "moxer-icons",
   "workbench.layoutControl.enabled": false,
   "workbench.editor.tabActionCloseVisibility": false,
-  "workbench.activityBar.orientation": "vertical", // modification for cursor only
-  "workbench.startupEditor": "none",
+  "workbench.activityBar.location": "bottom",
+  "workbench.activityBar.orientation": "vertical",
+  "window.customTitleBarVisibility": "windowed",
+  "workbench.tree.indent": 10,
   "workbench.tips.enabled": false,
   // security
   "security.workspace.trust.untrustedFiles": "open",
@@ -27,26 +28,6 @@
   "breadcrumbs.enabled": false,
   //terminal
   "terminal.integrated.fontFamily": "FiraCode-Retina",
-  // apc
-  "apc.font.family": "GeistMonoVariable-Medium",
-  "apc.activityBar": {
-    "position": "bottom",
-    "hideSettings": true,
-    "size": 30
-  },
-  "apc.statusBar": {
-    "position": "editor-bottom",
-    "height": 30,
-    "fontSize": 12
-  },
-  "apc.header": {
-    "height": 34,
-    "fontSize": 13
-  },
-  "apc.listRow": {
-    "height": 22,
-    "fontSize": 13
-  },
   // language settings
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -95,7 +76,44 @@
   // vscode vim settings
   "vim.useSystemClipboard": true,
   "vim.cursorStylePerMode.insert": "line",
+  "vim.leader": "<Space>",
   "vim.normalModeKeyBindingsNonRecursive": [
+    // allows for tab navigation shift + h or l
+    {
+      "before": ["<S-h>"],
+      "commands": [":bprevious"]
+    },
+    {
+      "before": ["<S-l>"],
+      "commands": [":bnext"]
+    },
+    // window splitting
+    {
+      "before": ["leader", "v"],
+      "commands": [":vsp"]
+    },
+    {
+      "before": ["leader", "s"],
+      "commands": [":sp"]
+    },
+    // pane switching
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    // movements
     {
       "before": ["J"],
       "after": ["5", "j"]
@@ -104,6 +122,7 @@
       "before": ["K"],
       "after": ["5", "k"]
     },
+    // ctrl + movement keys to navigate into file tree
     {
       "before": ["<C-h>"],
       "after": ["<C-w>", "h"]
@@ -157,6 +176,7 @@
       "after": ["<ESC>"]
     }
   ],
+  // cmd + c is handled by vsc not by vim
   "vim.handleKeys": {
     "<D-c>": false
   },
@@ -165,11 +185,13 @@
   "html.hover.references": false,
   // misc language settings
   "typescript.preferences.importModuleSpecifier": "shortest",
+  "typescript.preferences.includePackageJsonAutoImports": "on",
   "javascript.preferences.importModuleSpecifier": "relative",
   "solidity.defaultCompiler": "localNodeModule",
   "json.format.enable": false,
   "rust-analyzer.rustfmt.rangeFormatting.enable": true,
   "dart.debugExternalPackageLibraries": false,
   "dart.debugSdkLibraries": false,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "workbench.iconTheme": "bearded-icons"
 }
