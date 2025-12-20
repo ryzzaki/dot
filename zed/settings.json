@@ -1,0 +1,71 @@
+{
+  "icon_theme": "Bearded Icon Theme",
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Tokyo Night"
+  },
+  "cursor_blink": true,
+  "linked_edits": true,
+  "vim_mode": true,
+  "base_keymap": "VSCode",
+  "ui_font_size": 15,
+  "buffer_font_size": 12,
+  "buffer_font_family": "Fira Code",
+  "debugger": {
+    "dock": "left"
+  },
+  "terminal": {
+    "dock": "right",
+    "font_family": "Fira Code"
+  },
+  "tabs": {
+    "show_close_button": "hidden",
+    "file_icons": true,
+    "git_status": true,
+    "show_diagnostics": "all"
+  },
+  "project_panel": {
+    "indent_size": 16
+  },
+  "preferred_line_length": 160,
+  "tab_size": 2,
+  "scroll_beyond_last_line": "off",
+  "minimap": {
+    "show": "never"
+  },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false
+  },
+  "title_bar": {
+    "show_sign_in": false,
+    "show_user_picture": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "outline_panel": {
+    "button": false
+  },
+  "disable_ai": false,
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+  "agent": {
+    "enabled": true,
+    "button": true,
+    "default_view": "thread"
+  },
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  }
+}
