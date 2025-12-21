@@ -12,6 +12,27 @@
     }
   },
   {
+    "context": "VimControl && !menu",
+    "bindings": {
+      // key bindings here will work in normal & visual mode.
+      "p": ["workspace::SendKeystrokes", "P"],
+      // movement stuff
+      "shift-j": ["workspace::SendKeystrokes", "5 j"],
+      "shift-k": ["workspace::SendKeystrokes", "5 k"],
+      "g m": ["workspace::SendKeystrokes", "g M"],
+      "g v": ["workspace::SendKeystrokes", "5 0 %"],
+      // multi-cursor stuff
+      "g b": "editor::SelectNext",
+      "g B": "editor::SelectAllMatches"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "shift-y": ["workspace::SendKeystrokes", "y $"] // neovim's yank behavior: yank to end of line.
+    }
+  },
+  {
     "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
     "bindings": {
       // mini.ai plugin behavior
