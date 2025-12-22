@@ -31,10 +31,10 @@
       // key bindings here will work in normal & visual mode.
       "p": ["workspace::SendKeystrokes", "P"],
       // pane movement control
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
       // pane splitting
       "space v": "pane::SplitRight",
       "space h": "pane::SplitDown",
@@ -61,8 +61,8 @@
     "bindings": {
       "shift-y": ["workspace::SendKeystrokes", "y $"], // neovim's yank behavior: yank to end of line.
       // intermediate bindings
-      "ctrl-shift-d": ["vim::PushOperator", "Delete"],
-      "ctrl-shift-c": ["vim::PushOperator", "Change"],
+      "ctrl-shift-d": "vim::PushDelete",
+      "ctrl-shift-c": "vim::PushChange",
       "ctrl-shift-x": "vim::DeleteRight",
       // black hole register mappings
       "d": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d"],
