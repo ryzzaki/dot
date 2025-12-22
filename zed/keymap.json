@@ -23,7 +23,7 @@
       "g v": ["workspace::SendKeystrokes", "5 0 %"],
       // multi-cursor stuff
       "g b": "editor::SelectNext",
-      "g B": "editor::SelectAllMatches",
+      "g B": "editor::SelectPrevious",
       // move lines or blocks up/down
       "alt-j": "editor::MoveLineDown",
       "alt-k": "editor::MoveLineUp"
