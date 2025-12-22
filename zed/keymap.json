@@ -6,9 +6,23 @@
     }
   },
   {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      // pressing esc will return focus to the editor pane
+      "escape": "project_panel::ToggleFocus",
+      // emulates the vsc renaming keybind
+      "enter": "project_panel::Rename",
+      // remaps the file creation from default % to f
+      "f": "project_panel::NewFile",
+      // passthrough to prevent default behavior of toggling the project panel
+      "cmd-w": null
+    }
+  },
+  {
     "context": "Editor && vim_mode == insert",
     "bindings": {
-      "j k": "vim::SwitchToNormalMode"
+      // "j k": "vim::SwitchToNormalMode",
+      "j k": ["workspace::SendKeystrokes", "escape"]
     }
   },
   {
@@ -16,6 +30,17 @@
     "bindings": {
       // key bindings here will work in normal & visual mode.
       "p": ["workspace::SendKeystrokes", "P"],
+      // pane movement control
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      // pane splitting
+      "space v": "pane::SplitRight",
+      "space h": "pane::SplitDown",
+      // move between tabs
+      "shift-h": "pane::ActivatePreviousItem",
+      "shift-l": "pane::ActivateNextItem",
       // movement stuff
       "shift-j": ["workspace::SendKeystrokes", "5 j"],
       "shift-k": ["workspace::SendKeystrokes", "5 k"],
@@ -25,8 +50,8 @@
       "g b": "editor::SelectNext",
       "g B": "editor::SelectPrevious",
       // move lines or blocks up/down
-      "alt-j": "editor::MoveLineDown",
-      "alt-k": "editor::MoveLineUp"
+      "alt-k": "editor::MoveLineUp",
+      "alt-j": "editor::MoveLineDown"
     }
   },
   {
