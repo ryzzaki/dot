@@ -40,6 +40,7 @@
       // black hole register mappings
       "d": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d"],
       "d d": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d d"],
+      "d s": "vim::PushDeleteSurrounds",
       "x": ["workspace::SendKeystrokes", "\" _ ctrl-shift-x"],
       "c": ["workspace::SendKeystrokes", "\" _ ctrl-shift-c"],
       "shift-d": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d $"],
