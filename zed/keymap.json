@@ -23,13 +23,42 @@
       "g v": ["workspace::SendKeystrokes", "5 0 %"],
       // multi-cursor stuff
       "g b": "editor::SelectNext",
-      "g B": "editor::SelectAllMatches"
+      "g B": "editor::SelectAllMatches",
+      // move lines or blocks up/down
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp"
     }
   },
   {
     "context": "vim_mode == normal && !menu",
     "bindings": {
-      "shift-y": ["workspace::SendKeystrokes", "y $"] // neovim's yank behavior: yank to end of line.
+      "shift-y": ["workspace::SendKeystrokes", "y $"], // neovim's yank behavior: yank to end of line.
+      // intermediate bindings
+      "ctrl-shift-d": ["vim::PushOperator", "Delete"],
+      "ctrl-shift-c": ["vim::PushOperator", "Change"],
+      "ctrl-shift-x": "vim::DeleteRight",
+      // black hole register mappings
+      "d": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d"],
+      "d d": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d d"],
+      "x": ["workspace::SendKeystrokes", "\" _ ctrl-shift-x"],
+      "c": ["workspace::SendKeystrokes", "\" _ ctrl-shift-c"],
+      "shift-d": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d $"],
+      "shift-c": ["workspace::SendKeystrokes", "\" _ ctrl-shift-c $"]
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-s": "vim::PushAddSurrounds",
+      // intermediate bindings
+      "ctrl-shift-d": "vim::VisualDelete",
+      "ctrl-shift-c": "vim::Substitute",
+      // black hole register mappings
+      "d": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d"],
+      "x": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d"],
+      "c": ["workspace::SendKeystrokes", "\" _ ctrl-shift-c"],
+      "s": ["workspace::SendKeystrokes", "\" _ ctrl-shift-c"],
+      "shift-d": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d"]
     }
   },
   {
