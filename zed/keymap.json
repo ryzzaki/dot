@@ -49,6 +49,8 @@
       // multi-cursor stuff
       "g b": "editor::SelectNext",
       "g B": "editor::SelectPrevious",
+      "cmd-alt-k": "editor::AddSelectionAbove",
+      "cmd-alt-j": "editor::AddSelectionBelow",
       // move lines or blocks up/down
       "alt-k": "editor::MoveLineUp",
       "alt-j": "editor::MoveLineDown"
