@@ -2,8 +2,8 @@
   {
     "context": "Workspace",
     "bindings": {
-      "shift shift": "file_finder::Toggle"
-    }
+      "shift shift": "file_finder::Toggle",
+    },
   },
   {
     "context": "ProjectPanel && not_editing",
@@ -12,18 +12,19 @@
       "escape": "project_panel::ToggleFocus",
       // emulates the vsc renaming keybind
       "enter": "project_panel::Rename",
+      "l": "project_panel::Open",
       // remaps the file creation from default % to f
       "f": "project_panel::NewFile",
       // passthrough to prevent default behavior of toggling the project panel
-      "cmd-w": null
-    }
+      "cmd-w": null,
+    },
   },
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
       // "j k": "vim::SwitchToNormalMode",
-      "j k": ["workspace::SendKeystrokes", "escape"]
-    }
+      "j k": ["workspace::SendKeystrokes", "escape"],
+    },
   },
   {
     "context": "VimControl && !menu",
@@ -53,8 +54,8 @@
       "cmd-alt-j": "editor::AddSelectionBelow",
       // move lines or blocks up/down
       "alt-k": "editor::MoveLineUp",
-      "alt-j": "editor::MoveLineDown"
-    }
+      "alt-j": "editor::MoveLineDown",
+    },
   },
   {
     "context": "vim_mode == normal && !menu",
@@ -71,8 +72,8 @@
       "x": ["workspace::SendKeystrokes", "\" _ ctrl-shift-x"],
       "c": ["workspace::SendKeystrokes", "\" _ ctrl-shift-c"],
       "shift-d": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d $"],
-      "shift-c": ["workspace::SendKeystrokes", "\" _ ctrl-shift-c $"]
-    }
+      "shift-c": ["workspace::SendKeystrokes", "\" _ ctrl-shift-c $"],
+    },
   },
   {
     "context": "vim_mode == visual",
@@ -86,15 +87,15 @@
       "x": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d"],
       "c": ["workspace::SendKeystrokes", "\" _ ctrl-shift-c"],
       "s": ["workspace::SendKeystrokes", "\" _ ctrl-shift-c"],
-      "shift-d": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d"]
-    }
+      "shift-d": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d"],
+    },
   },
   {
     "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
     "bindings": {
       // mini.ai plugin behavior
       "q": "vim::MiniQuotes",
-      "b": "vim::MiniBrackets"
-    }
-  }
+      "b": "vim::MiniBrackets",
+    },
+  },
 ]
