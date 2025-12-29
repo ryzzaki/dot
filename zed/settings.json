@@ -3,7 +3,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Tokyo Night"
+    "dark": "Tokyo Night",
   },
   "cursor_blink": true,
   "linked_edits": true,
@@ -13,59 +13,65 @@
   "buffer_font_size": 12,
   "buffer_font_family": "Fira Code",
   "debugger": {
-    "dock": "left"
+    "dock": "left",
   },
   "terminal": {
     "dock": "right",
-    "font_family": "Fira Code"
+    "font_family": "Fira Code",
   },
   "tabs": {
     "show_close_button": "hidden",
     "file_icons": true,
     "git_status": true,
-    "show_diagnostics": "all"
+    "show_diagnostics": "all",
   },
   "project_panel": {
-    "indent_size": 16
+    "indent_size": 16,
   },
   "preferred_line_length": 160,
   "tab_size": 2,
   "scroll_beyond_last_line": "off",
   "minimap": {
-    "show": "never"
+    "show": "never",
   },
   "tab_bar": {
     "show": true,
-    "show_nav_history_buttons": false
+    "show_nav_history_buttons": false,
   },
   "toolbar": {
     "breadcrumbs": false,
-    "quick_actions": false
+    "quick_actions": false,
   },
   "title_bar": {
     "show_sign_in": false,
-    "show_user_picture": false
+    "show_user_picture": false,
   },
   "notification_panel": {
-    "button": false
+    "button": false,
   },
   "collaboration_panel": {
-    "button": false
+    "button": false,
   },
   "outline_panel": {
-    "button": false
+    "button": false,
   },
   "disable_ai": false,
   "features": {
-    "edit_prediction_provider": "none"
+    "edit_prediction_provider": "none",
   },
   "agent": {
     "enabled": true,
     "button": true,
-    "default_view": "thread"
+    "default_view": "thread",
+  },
+  "agent_servers": {
+    "claude": {
+      "default_model": null,
+      "default_mode": "plan",
+    },
   },
   "telemetry": {
     "metrics": false,
-    "diagnostics": false
-  }
+    "diagnostics": false,
+  },
 }
