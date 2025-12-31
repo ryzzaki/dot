@@ -3,7 +3,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Tokyo Night",
+    "dark": "Catppuccin Mocha",
   },
   "base_keymap": "VSCode",
   "vim_mode": true,

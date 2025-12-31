@@ -1,5 +1,10 @@
 [
   {
+    "bindings": {
+      "ctrl-.": "editor::ShowCompletions",
+    },
+  },
+  {
     "context": "Workspace",
     "bindings": {
       "shift shift": "file_finder::Toggle",
