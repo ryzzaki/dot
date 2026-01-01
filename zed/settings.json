@@ -28,6 +28,10 @@
   },
   "project_panel": {
     "indent_size": 16,
+    "hide_root": true,
+    "scrollbar": {
+      "show": "never",
+    },
   },
   "preferred_line_length": 160,
   "tab_size": 2,
