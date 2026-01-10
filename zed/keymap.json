@@ -2,12 +2,28 @@
   {
     "bindings": {
       "ctrl-.": "editor::ShowCompletions",
+      "ctrl-j": "menu::SelectNext",
+      "ctrl-k": "menu::SelectPrevious",
     },
   },
   {
     "context": "Workspace",
     "bindings": {
       "shift shift": "file_finder::Toggle",
+    },
+  },
+  {
+    "context": "BufferSearchBar",
+    "bindings": {
+      "enter": "search::SelectNextMatch",
+      "shift-enter": "search::SelectPreviousMatch",
+    },
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "ctrl-k": "editor::ContextMenuPrevious",
+      "ctrl-j": "editor::ContextMenuNext",
     },
   },
   {
@@ -35,6 +51,7 @@
     "context": "VimControl && !menu",
     "bindings": {
       // key bindings here will work in normal & visual mode.
+      "space m": "editor::OpenContextMenu",
       "p": ["workspace::SendKeystrokes", "P"],
       // pane movement control
       "ctrl-h": "workspace::ActivatePaneLeft",
@@ -68,16 +85,18 @@
       "shift-y": ["workspace::SendKeystrokes", "y $"], // neovim's yank behavior: yank to end of line.
       // intermediate bindings
       "ctrl-shift-d": "vim::PushDelete",
-      "ctrl-shift-c": "vim::PushChange",
       "ctrl-shift-x": "vim::DeleteRight",
+      "ctrl-shift-c": "vim::PushChange",
+      "ctrl-shift-s": "vim::Substitute",
+      "ctrl-shift-l": "vim::SubstituteLine",
       // black hole register mappings
       "d": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d"],
-      "d d": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d d"],
-      "d s": "vim::PushDeleteSurrounds",
       "x": ["workspace::SendKeystrokes", "\" _ ctrl-shift-x"],
       "c": ["workspace::SendKeystrokes", "\" _ ctrl-shift-c"],
+      "s": ["workspace::SendKeystrokes", "\" _ ctrl-shift-s"],
       "shift-d": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d $"],
       "shift-c": ["workspace::SendKeystrokes", "\" _ ctrl-shift-c $"],
+      "shift-s": ["workspace::SendKeystrokes", "\" _ ctrl-shift-l"],
     },
   },
   {
@@ -90,8 +109,7 @@
       // black hole register mappings
       "d": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d"],
       "x": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d"],
-      "c": ["workspace::SendKeystrokes", "\" _ ctrl-shift-c"],
-      "s": ["workspace::SendKeystrokes", "\" _ ctrl-shift-c"],
+      "s": ["workspace::SendKeystrokes", "\" _ ctrl-shift-s"],
       "shift-d": ["workspace::SendKeystrokes", "\" _ ctrl-shift-d"],
     },
   },
